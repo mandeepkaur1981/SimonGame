@@ -61,9 +61,11 @@ function checkAnswer(currentLevel){
         console.log("failed");
         $("#level-title").text("Game over!");
         playSound("wrong");
+        $("body").addClass("game-over");
         setTimeout(()=>{
             $("#level-title").text("Press A Key to Start");
-        },1000);
+            $("body").removeClass("game-over");
+        },500);
         firsttime = true;
         gamePattern=[];
         userClickedPattern=[];
