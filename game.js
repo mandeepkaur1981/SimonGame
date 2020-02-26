@@ -60,6 +60,7 @@ function checkAnswer(currentLevel){
     if(failed){
         console.log("failed");
         $("#level-title").text("Game over!");
+        playSound("wrong");
         setTimeout(()=>{
             $("#level-title").text("Press A Key to Start");
         },1000);
